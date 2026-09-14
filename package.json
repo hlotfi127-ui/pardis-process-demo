@@ -1,7 +1,9 @@
 {
-  "name": "pardis-process-demo",
-  "version": "3.1.0",
+  "name": "pardis-process-system",
+  "version": "4.0.0",
   "private": true,
-  "engines": {"node": ">=22"},
-  "scripts": {"start": "node server.js"}
+  "description": "سامانه مدیریت و پایش فرآیندهای پردیس پلاست کویر - نسخه محلی 4",
+  "main": "server.js",
+  "engines": {"node": ">=22.5.0"},
+  "scripts": {"start": "node server.js", "check": "node --check server.js"}
 }
