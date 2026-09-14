@@ -1,0 +1,33 @@
+{
+  "owners": [
+    {
+      "name": "حمید تقوایی",
+      "title": "مدیرعامل",
+      "photo": "assets/owners/hamid-taghvaei.png",
+      "processes": ["PR-01"]
+    },
+    {
+      "name": "حامد لطفی",
+      "title": "مدیر سیستم کیفیت",
+      "photo": "assets/owners/hamed-lotfi.png",
+      "processes": ["PR-02", "PR-07"]
+    },
+    {
+      "name": "علی نمازی‌فر",
+      "title": "مدیر منابع انسانی",
+      "photo": "assets/owners/ali-namazifar.png",
+      "processes": ["PR-10"]
+    },
+    {
+      "name": "فرهاد محمدی",
+      "title": "مدیر اجرایی شرکت",
+      "photo": "assets/owners/farhad-mohammadi.png",
+      "processes": ["PR-04", "PR-05", "PR-06", "PR-08", "PR-12"]
+    }
+  ],
+  "notes": [
+    "PR-08 انبارش و تحویل در معرفی کاربر دوبار تکرار شده بود و یک‌بار منظور شده است.",
+    "مالکانی که عکس تأییدشده ندارند باید با Avatar استاندارد نمایش داده شوند.",
+    "رتبه مالک برتر و پیشتازان بهبود باید فقط از داده واقعی سامانه محاسبه شود و ثابت نباشد."
+  ]
+}
