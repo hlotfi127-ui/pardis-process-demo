@@ -1,0 +1,30 @@
+name: V4 QA
+on:
+  push:
+    branches: [v4-redesign]
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: node --check server.js
+      - name: Start application
+        run: |
+          node server.js > app.log 2>&1 &
+          sleep 3
+      - name: Verify login GET and HEAD
+        run: |
+          curl --fail --silent --show-error http://127.0.0.1:3000/login -o /tmp/login.html
+          curl --fail --silent --show-error --head http://127.0.0.1:3000/login
+          grep -q 'ورود' /tmp/login.html
+      - name: Preserve server log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v4-server-log
+          path: app.log
